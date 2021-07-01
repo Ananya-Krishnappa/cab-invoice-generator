@@ -39,7 +39,7 @@ public class RideRepository {
 	 * This method is used to get rides
 	 * 
 	 * @param userId
-	 * @return
+	 * @return Ride[]
 	 * @throws RideRepositoryException
 	 */
 	public Ride[] getRides(String userId) throws RideRepositoryException {
