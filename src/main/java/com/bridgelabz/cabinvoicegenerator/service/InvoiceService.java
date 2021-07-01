@@ -1,3 +1,11 @@
+/**
+ * Purpose:Cab Invoice Generator- The cab service is subscription based system,
+ * where the customer can book and pay bill at the end.
+ * @author Ananya K
+ * @version 1.0
+ * @since 1/07/2021
+ * 
+ */
 package com.bridgelabz.cabinvoicegenerator.service;
 
 import com.bridgelabz.cabinvoicegenerator.dao.RideRepository;
@@ -49,6 +57,14 @@ public class InvoiceService {
 		rideRepository.addRides(userId, rides);
 	}
 
+	/**
+	 * This methos is used to get the invoice summary
+	 * 
+	 * @param userId
+	 * @param rideType
+	 * @return InvoiceSummary
+	 * @throws RideRepositoryException
+	 */
 	public InvoiceSummary getInvoiceSummary(String userId, RideType rideType) throws RideRepositoryException {
 		try {
 			Ride[] rides = rideRepository.getRides(userId);
