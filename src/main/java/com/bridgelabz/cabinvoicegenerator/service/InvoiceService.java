@@ -33,7 +33,7 @@ public class InvoiceService {
 
 	/**
 	 * Invoice service should take multiple rides and return aggregate total fare
-	 * for all rides
+	 * for all rides.
 	 * 
 	 * @param rides
 	 * @param normal
@@ -58,7 +58,7 @@ public class InvoiceService {
 	}
 
 	/**
-	 * This methos is used to get the invoice summary
+	 * This method is used to get the invoice summary
 	 * 
 	 * @param userId
 	 * @param rideType
