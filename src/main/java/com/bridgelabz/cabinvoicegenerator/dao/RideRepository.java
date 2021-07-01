@@ -21,12 +21,27 @@ public class RideRepository {
 		this.userRides = userRides;
 	}
 
+	/**
+	 * Function to add rides
+	 * 
+	 * @param userId
+	 * @param rides
+	 * @return List<Ride>
+	 * @throws RideRepositoryException
+	 */
 	public List<Ride> addRides(String userId, Ride[] rides) throws RideRepositoryException {
 		if (rides != null && userId != "")
 			return userRides.put(userId, Arrays.asList(rides));
 		throw new RideRepositoryException("No ride found for the user " + userId, ExceptionType.NO_RIDE_FOUND);
 	}
 
+	/**
+	 * This method is used to get rides
+	 * 
+	 * @param userId
+	 * @return
+	 * @throws RideRepositoryException
+	 */
 	public Ride[] getRides(String userId) throws RideRepositoryException {
 		if (userId.isEmpty()) {
 			List<Ride> rideList = new ArrayList<Ride>();
